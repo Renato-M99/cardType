@@ -1,0 +1,113 @@
+/* ----------------- RESETS GERAIS ---------------- */
+*{ 
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.italic{
+    font-style: italic;
+}
+.title{
+    font-weight: bold;
+}
+
+/* ---------------- MAIN ------------------ */
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 6rem;
+    margin-top: 96px;
+}
+
+.main form{
+    border: 1px red solid;
+
+    width: 50%;
+    height: 70vh;
+}
+
+/* RIGHT SIDE */
+
+.select{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    box-sizing: border-box;
+    padding: 4rem;
+
+}
+
+.select select, .select input{
+
+    width: 50%;
+    margin: 0 auto;
+}
+
+/*  RIGHT SIDE - BUTTONS */
+
+.btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.btns button{
+    width: 20%;
+    height: 6vh;
+    border: 0;
+    border-radius: 1rem;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    color:white;
+
+    transition: all 0.3s ease-in;
+}
+
+.add{
+    background-color: green;
+}
+
+.clear{
+    background-color: red;
+}
+
+.add:hover{
+    background-color: white;
+    color: green;
+}
+
+.clear:hover{
+    color:red;
+    background-color: white;
+}
+
+/* LEFT SIDE */
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    box-sizing: border-box;
+    padding: 4rem;
+}
+
+.list{
+    border: 1px solid blue;
+    width: 90%;
+    height: 60%;
+    margin: 0 auto;
+}
