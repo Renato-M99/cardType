@@ -4,7 +4,7 @@ const clearBtn = document.querySelector(".clear")!;
 const products = document.querySelector(".products") as HTMLSelectElement;
 
 let card = document.querySelector(".list") as HTMLUListElement;
-let selectProducts = [];
+
 let qtd = document.querySelector(".qtd") as HTMLInputElement;
 let totalCall = document.querySelector(".total") as HTMLInputElement;
 let total: number = 0;
@@ -12,7 +12,12 @@ let total: number = 0;
 
 addBtn?.addEventListener('click', (e) => {
     e.preventDefault();
-    add()
+    add();
+})
+
+clearBtn?.addEventListener('click', (e) => {
+    
+    clear();
 })
 
 
@@ -24,28 +29,20 @@ function add() {
     let quantity = Number(qtd.value);
     let li = document.createElement("li");
 
-    li.innerHTML = `${selectedProduct} - ${qtd.value}`;
+    li.innerHTML = `${selectedProduct} - ${qtd.value}x`;
    
     card.append(li);
     total += Number(products.options[products.selectedIndex].value) * quantity;
 
     totalCall.innerText= `Total: ${total.toFixed(2)} R$` ;
     
-
-
     
 }
 
 function clear() {
-
-}
-
-
-function push(text: string, quantity: number){
-    for(let i = 0; i <= selectProducts.length - 1; i++){
-        selectProducts.push(text, quantity);
-        
-    }
+    card.innerHTML = '';
+    totalCall.innerHTML = 'Total: ';
+    qtd.value = '';
 }
 
 
@@ -73,9 +70,8 @@ function push(text: string, quantity: number){
 
 
 
-/* clearBtn?.addEventListener('click', (e) => {
-    e.preventDefault;
-    alert("clicou2");
-}) */
+
+
+
 
 
